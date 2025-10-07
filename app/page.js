@@ -19,7 +19,7 @@ const Footer = () => {
 
 export default function Home() {
   return (
-    <main>
+    <main className="p-4 w-full">
       <Header />
       <Hero />
       <About />
