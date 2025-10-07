@@ -15,7 +15,7 @@ const About = () => {
       transition={{ duration: 0.8, ease: "easeOut" }}
       className="py-24 bg-gray-50"
     >
-      <div className="container mx-auto px-4 md:px-8 mt-20">
+      <div className="container  px-4 mx-25 md:px-8 mt-20">
         <div className="flex flex-col md:flex-row gap-12 items-center">
 
           {/* Image Section with Badge */}

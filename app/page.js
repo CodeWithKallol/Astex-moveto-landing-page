@@ -9,7 +9,7 @@ import Header from "./components/Header";
 // A simple placeholder footer component
 const Footer = () => {
   return (
-    <footer className="bg-brand-dark text-white py-8">
+    <footer className="bg-gray-500 text-black py-8">
       <div className="container mx-auto text-center">
         <p>&copy; 2025 Moveto. All Rights Reserved.</p>
       </div>
