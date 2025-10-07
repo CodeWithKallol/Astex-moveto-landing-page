@@ -1,12 +1,9 @@
-// app/page.js
-
 import Hero from "./components/Hero";
 import About from "./components/About";
 import WhyChooseUs from "./components/WhyChooseUs";
 import Services from "./components/Services";
 import Header from "./components/Header";
 
-// A simple placeholder footer component
 const Footer = () => {
   return (
     <footer className="bg-gray-500 text-black py-8">

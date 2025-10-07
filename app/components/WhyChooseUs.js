@@ -1,11 +1,6 @@
 'use client';
 import { motion } from 'framer-motion';
 import { FaQuoteLeft } from 'react-icons/fa';
-
-// --- SVG Icons ---
-// By using inline SVGs, we remove the need for the external 'react-icons' library,
-// which resolves the compilation error.
-
 const StarIcon = () => (
   <svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 24 24" fill="currentColor">
     <path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z" />
@@ -30,19 +25,16 @@ const ToolsIcon = () => (
     <path d="M20.9 11.2c-.3-.3-.8-.3-1.1 0l-1.8 1.8-1.5-1.5 1.8-1.8c.3-.3.3-.8 0-1.1l-1.4-1.4c-.3-.3-.8-.3-1.1 0l-1.8 1.8-1.5-1.5 1.8-1.8c.3-.3.3-.8 0-1.1l-1.4-1.4c-.3-.3-.8-.3-1.1 0l-1.8 1.8-1.5-1.5 1.8-1.8c.3-.3.3-.8 0-1.1l-1.4-1.4c-.3-.3-.8-.3-1.1 0l-1.8 1.8-1.5-1.5 1.8-1.8c.3-.3.3-.8 0-1.1l-1.4-1.4c-.3-.3-.8-.3-1.1 0L3 10.1c-1.2 1.2-1.2 3.1 0 4.2l9.1 9.1c1.2 1.2 3.1 1.2 4.2 0l4.6-4.6c.3-.3.3-.8 0-1.1l-1-1z" />
   </svg>
 );
-
-// Animation variants for the parent container (staggering children)
 const containerVariants = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
     transition: {
-      staggerChildren: 0.2, // This will apply a 0.2s delay between each child animation
+      staggerChildren: 0.2,
     },
   },
 };
 
-// Animation variants for the child cards
 const itemVariants = {
   hidden: { y: 20, opacity: 0 },
   visible: {
@@ -55,7 +47,6 @@ const itemVariants = {
 };
 
 const FeatureCard = ({ icon, title, text }) => (
-  // Each card is now a motion.div using the itemVariants for animation
   <motion.div
     variants={itemVariants}
     className="bg-white p-8 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-2 transition-all duration-300 text-center sm:text-left"
@@ -85,8 +76,6 @@ const WhyChooseUs = () => {
             </p>
           </div>
         </div>
-
-        {/* Responsive Grid Container */}
         <motion.div
           variants={containerVariants}
           initial="hidden"

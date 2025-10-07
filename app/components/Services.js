@@ -1,7 +1,5 @@
-// components/Services.js
 'use client';
 
-// --- SVG Icons (No changes needed here) ---
 const StarIcon = ({ className }) => (<svg xmlns="http://www.w3.org/2000/svg" className={className} viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.957a1 1 0 00.95.69h4.162c.969 0 1.371 1.24.588 1.81l-3.367 2.445a1 1 0 00-.364 1.118l1.287 3.957c.3.921-.755 1.688-1.539 1.118l-3.367-2.445a1 1 0 00-1.176 0l-3.367 2.445c-.784.57-1.838-.197-1.539-1.118l1.287-3.957a1 1 0 00-.364-1.118L2.35 9.384c-.783-.57-.38-1.81.588-1.81h4.162a1 1 0 00.95-.69L9.049 2.927z" /></svg>);
 const GlobeIcon = ({ size = 24 }) => (<svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>);
 const HomeIcon = ({ size = 24 }) => (<svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>);
@@ -13,28 +11,19 @@ const ServiceItem = ({ icon, title, text }) => (
 
 const ProfessionalServiceSection = () => {
   return (
-    // Corrected non-standard py-15 to py-20
     <section className="py-20 bg-gray-200 w-full">
       <div className="container mx-auto px-4">
-        {/* The main grid already stacks on mobile (`md:grid-cols-2`), which is good. */}
         <div className="grid md:grid-cols-2 gap-12 items-center">
           {/* Image Section */}
-          {/* - CHANGE: Made the container `md:relative` so the absolute positioning only applies on medium screens and up.
-            - On mobile, it's a standard block element, and I added `flex flex-col items-center` to center the content.
-          */}
           <div className="md:relative flex flex-col items-center">
             <img
               src={'/packing-5.png'}
               alt="Professional mover with clipboard"
               width={350}
               height={450}
-              // Corrected mx-50 (non-standard) to mx-auto and added width constraints for responsiveness
               className="rounded-lg object-cover mix-blend-multiply w-full max-w-sm"
             />
-            {/* - CHANGE: The rating card is now conditionally absolute.
-              - On mobile, it's part of the normal document flow (with a negative margin to overlap slightly).
-              - On `md` screens, it becomes an absolutely positioned overlay.
-            */}
+
             <div className="mt-[1rem] md:mt-0 md:absolute md:-top-6 md:-left-6 bg-white p-4 shadow-lg w-56 flex items-center gap-3 transition-transform duration-300 hover:scale-105">
               <p className="font-bold text-4xl text-orange-500">4.8</p>
               <div>
@@ -47,17 +36,16 @@ const ProfessionalServiceSection = () => {
           </div>
 
           {/* Text Content Section */}
-          <div className="text-center md:text-left"> {/* Center text on mobile */}
+          <div className="text-center md:text-left">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Professional Service Ready For Your Moving Plan</h2>
             <p className="text-gray-600 mb-8 leading-relaxed">
               Nulla nec id velit vitae rhoncus porta tellus ultrices scelerisque. Ornare orci in consequat id magna efficitur. Faucibus in sed risus. Hac purus pulvinar praesent nisl sed feugiat.
             </p>
-            {/* This grid for services was already responsive, which is great. */}
             <div className="grid sm:grid-cols-2 gap-x-6 gap-y-8">
-              <ServiceItem icon={<GlobeIcon />} title="International Moves" text="Condimentum cursus facilisis aliquam porttitor."/>
-              <ServiceItem icon={<HomeIcon />} title="Domestic Moves" text="Condimentum cursus facilisis aliquam porttitor."/>
-              <ServiceItem icon={<BuildingIcon />} title="Office Moves" text="Condimentum cursus facilisis aliquam porttitor."/>
-              <ServiceItem icon={<CarIcon />} title="Vehicle Transfer" text="Condimentum cursus facilisis aliquam porttitor."/>
+              <ServiceItem icon={<GlobeIcon />} title="International Moves" text="Condimentum cursus facilisis aliquam porttitor." />
+              <ServiceItem icon={<HomeIcon />} title="Domestic Moves" text="Condimentum cursus facilisis aliquam porttitor." />
+              <ServiceItem icon={<BuildingIcon />} title="Office Moves" text="Condimentum cursus facilisis aliquam porttitor." />
+              <ServiceItem icon={<CarIcon />} title="Vehicle Transfer" text="Condimentum cursus facilisis aliquam porttitor." />
             </div>
           </div>
         </div>

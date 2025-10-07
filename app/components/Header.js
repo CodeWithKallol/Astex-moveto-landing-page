@@ -1,4 +1,3 @@
-// components/Header.js
 'use client';
 import { Button } from '@/components/ui/button';
 import { useState } from 'react';
@@ -24,8 +23,6 @@ const Header = () => {
           <div className="flex-shrink-0 hover:scale-105">
             <a href="#" className="text-3xl font-bold text-gray-800 ">Moveto</a>
           </div>
-
-          {/* Desktop Navigation */}
           <nav className="hidden md:flex md:items-center md:space-x-8">
             {navLinks.map((link) => (
               <a key={link.name} href="#" className="flex mx-5 items-center hover:text-orange-600 transition-colors duration-300 hover:scale-105">
@@ -34,16 +31,12 @@ const Header = () => {
               </a>
             ))}
           </nav>
-
-          {/* Social Icons & Quote Button */}
           <div className="hidden md:flex items-center gap-5 ">
             <a href="#" className="hover:text-orange-600 transition-colors hover:scale-110"><FaFacebookF /></a>
             <a href="#" className="hover:text-orange-600 transition-colors hover:scale-110"><FaTwitter /></a>
             <a href="#" className="hover:text-orange-600 transition-colors hover:scale-110"><FaInstagram /></a>
             <Button className="mt-2 max-w-xs px-5 py-2 bg-orange-500 rounded-4xl text-sm font-medium hover:bg-orange-400 transition-all duration-300 cursor-pointer">GET A QUOTE</Button>
           </div>
-
-          {/* Mobile Menu Button */}
           <div className="md:hidden">
             <button onClick={() => setIsOpen(!isOpen)} className="text-black focus:outline-none">
               {isOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
@@ -51,8 +44,6 @@ const Header = () => {
           </div>
         </div>
       </div>
-
-      {/* Mobile Menu */}
       {isOpen && (
         <div className="md:hidden bg-brand-dark bg-opacity-90">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 flex flex-col items-center">
