@@ -21,13 +21,13 @@ const Hero = () => {
         <p className="text-sm md:text-sm mx-auto mb-8">
           Convallis vivamus at cras porta nibh. Ornare egestas morbi<br /> blandit lacus et feugiat. Nisl laoreet proin aenean sed ut.
         </p>
-        <Button size="lg" className="bg-orange-600 hover:bg-orange-400 rounded-4xl text-sm px-7 py-6 cursor-pointer mb-6">
+        <Button size="lg" className="bg-orange-600 hover:bg-orange-400 rounded-4xl text-sm px-7 py-6 cursor-pointer mb-10">
           DISCOVER MORE
         </Button>
       </motion.div>
-
+      
       {/* Estimate Form Section - Now absolutely positioned */}
-      <div className="absolute bottom-0 left-1/2 w-full -translate-x-1/2 translate-y-1/2 px-4 mt-5">
+      <div className="absolute bottom-0 left-1/2 w-full -translate-x-1/2 translate-y-1/2 px-4 mt-8 sm:mt-10 md:mt-10">
         <div className="bg-white shadow-lg rounded-sm p-8 md:p-12 max-w-6xl mx-auto hover:scale-105">
           <div className="flex flex-col lg:flex-row items-center gap-7 w-full">
             <h3 className="text-xl md:text-3xl font-bold text-black whitespace-nowrap flex-shrink-0 text-center lg:text-left sm:overflow-hidden">

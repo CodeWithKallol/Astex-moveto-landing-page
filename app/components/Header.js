@@ -28,7 +28,7 @@ const Header = () => {
           {/* Desktop Navigation */}
           <nav className="hidden md:flex md:items-center md:space-x-8">
             {navLinks.map((link) => (
-              <a key={link.name} href="#" className="flex mx-5 items-center hover:text-brand-orange transition-colors duration-300 hover:scale-105">
+              <a key={link.name} href="#" className="flex mx-5 items-center hover:text-orange-600 transition-colors duration-300 hover:scale-105">
                 {link.name}
                 {link.dropdown && <FiChevronDown className="ml-1" />}
               </a>
@@ -36,10 +36,10 @@ const Header = () => {
           </nav>
 
           {/* Social Icons & Quote Button */}
-          <div className="hidden md:flex items-center gap-5">
-            <a href="#" className="hover:text-brand-orange transition-colors"><FaFacebookF /></a>
-            <a href="#" className="hover:text-brand-orange transition-colors"><FaTwitter /></a>
-            <a href="#" className="hover:text-brand-orange transition-colors"><FaInstagram /></a>
+          <div className="hidden md:flex items-center gap-5 ">
+            <a href="#" className="hover:text-orange-600 transition-colors hover:scale-110"><FaFacebookF /></a>
+            <a href="#" className="hover:text-orange-600 transition-colors hover:scale-110"><FaTwitter /></a>
+            <a href="#" className="hover:text-orange-600 transition-colors hover:scale-110"><FaInstagram /></a>
             <Button className="mt-2 max-w-xs px-5 py-2 bg-orange-500 rounded-4xl text-sm font-medium hover:bg-orange-400 transition-all duration-300 cursor-pointer">GET A QUOTE</Button>
           </div>
 
