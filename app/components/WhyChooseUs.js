@@ -81,7 +81,7 @@ const WhyChooseUs = () => {
           <div className="flex gap-10 mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-800">Client Satisfaction Is Our <br />Primary Focus</h2>
             <p className="text-gray-600 mt-4 max-w-2xl mx-auto">
-              We provide top-tier moving services with a focus on reliability, security, and customer satisfaction. Here's what sets us apart.
+              We provide top-tier moving services with a focus on reliability, security, and customer satisfaction. Here is what sets us apart.
             </p>
           </div>
         </div>
